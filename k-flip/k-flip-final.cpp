@@ -4,11 +4,10 @@
 
 void solve()
 {
-    int n, k;
-    k = 3;
-    n = 13;
-    std::string s = "1010011011010";
+    int n, k; std::cin >> n >> k;
+    std::string s; std::cin >> s;
     std::vector<int>v(n, 0);
+   
     for (int i = 0; i < n; i++)
     {
         v[i] = s[i] - '0';
@@ -39,11 +38,13 @@ void solve()
         }
         v[i] = (v[i] + q.size()) % 2;
     }
+
     std::string ans(n, '0');
     for (int i = 0; i < n; i++)
     {
         ans[i] = '0' + v[i];
     }
+   
     std::cout << ans << "\n";
 }
 
